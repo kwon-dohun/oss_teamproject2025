@@ -76,9 +76,10 @@ evidence는 반드시 다음을 따른다:
 [제출된 과제 내용]
 %s
 
-반드시 JSON 형식으로만 응답하라:
+반드시 JSON 형식으로만 응답하라.
+응답(JSON 내부 텍스트 포함)은 반드시 영어로 작성하라:
 
 {
   "status": "FULFILLED | PARTIAL | NOT_FULFILLED",
-  "evidence": "판단 이유를 2~3문장으로 논리적으로 설명"
+  "evidence": "Write a concise 2–3 sentence logical explanation in English."
 }
