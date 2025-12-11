@@ -18,9 +18,9 @@ function AnalyzePage() {
     const submissionFile = state?.submissionFile;
 
     const stepTexts = [
-        "요구사항을 분석하는 중",
-        "제출 문서를 분석하는 중",
-        "검증 보고서를 정리하는 중"
+        "Analyzing requirements",
+        "Analyzing submission document",
+        "Compiling validation report"
     ];
 
     useEffect(() => {
@@ -32,7 +32,6 @@ function AnalyzePage() {
         if (startedRef.current) return;
         startedRef.current = true;
 
-        // 점 애니메이션
         const dotInterval = setInterval(() => {
             setDotCount(prev => (prev === 3 ? 1 : prev + 1));
         }, 450);
@@ -48,7 +47,6 @@ function AnalyzePage() {
             setActiveStep(3);
         }, 2700));
 
-        // 실제 API 호출
         (async () => {
             try {
                 const apiResult = await analyzeRequest(requirementsFile, submissionFile);
@@ -67,7 +65,7 @@ function AnalyzePage() {
 
             } catch (err) {
                 console.error(err);
-                alert("분석 중 오류가 발생했습니다.");
+                alert("An error occurred during analysis.");
                 navigate("/");
             }
         })();
@@ -81,7 +79,6 @@ function AnalyzePage() {
     return (
         <div className="analyze-root">
 
-            {/* NAVBAR — 업로드 페이지와 동일 */}
             <nav className="navbar">
                 <div
                     className="nav-left"
@@ -96,12 +93,11 @@ function AnalyzePage() {
                 </div>
             </nav>
 
-            {/* 중앙 컨텐츠 */}
             <div className="analyze-container">
 
                 <div className="spinner"></div>
 
-                <h1 className="loading-title">문서를 분석하고 있습니다...</h1>
+                <h1 className="loading-title">Analyzing your documents...</h1>
 
                 <div className="steps-wrapper">
                     {stepTexts.map((txt, i) => {

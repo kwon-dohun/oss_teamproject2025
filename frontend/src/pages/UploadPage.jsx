@@ -58,7 +58,7 @@ function UploadPage() {
                 <div className="loading-overlay">
                     <div className="loading-box">
                         <div className="spinner"></div>
-                        <p className="loading-text">분석 준비 중...</p>
+                        <p className="loading-text">Setting up the analysis...</p>
                     </div>
                 </div>
             )}
@@ -85,7 +85,7 @@ function UploadPage() {
                 />
                 </div>
                 <p className="hero-subtitle">
-                    제출할 문서를 요구사항과 비교하여 충족 여부를 분석합니다.
+                    We analyze your document by comparing it with the requirements to determine its compliance.
                 </p>
                 <div className="hero-full-divider"/>
 
@@ -93,19 +93,19 @@ function UploadPage() {
                     <div className="step-item">
                         <span className="step-badge">Step 1</span>
                         <span className="step-text">
-                            요구사항 / 제출물 문서를 업로드합니다.
+                            Upload the requirements and submission documents.
                         </span>
                     </div>
                     <div className="step-item">
                         <span className="step-badge">Step 2</span>
                         <span className="step-text">
-                            AI가 문서를 분석하고 평가합니다.
+                            AI analyzes and evaluates the documents.
                         </span>
                     </div>
                     <div className="step-item">
                         <span className="step-badge">Step 3</span>
                         <span className="step-text">
-                            충족률과 상세 평가 결과를 확인합니다.
+                            Review the compliance score and detailed results.
                         </span>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ function UploadPage() {
                 <div className="upload-container">
 
                     <div className="upload-card">
-                        <div className="card-title">📘 요구사항 문서</div>
+                        <div className="card-title">📘 Requirement Document</div>
 
                         <div
                             className={`dropzone 
@@ -142,24 +142,24 @@ function UploadPage() {
                             {reqFile ? (
                                 <span className="file-name">{reqFile.name}</span>
                             ) : (
-                                <span className="placeholder">여기에 파일을 드래그하거나 클릭하세요</span>
+                                <span className="placeholder">Drag a file here or click to upload</span>
                             )}
                         </div>
 
                         {reqError && (
                             <div className="error-text">
-                                지원하지 않는 파일 형식입니다.
+                                Unsupported file format.
                             </div>
                         )}
 
                         <div className="file-hint">
-                            • 지원 형식: PDF, DOCX, TXT
+                            • Supported formats: PDF, DOCX, TXT
                         </div>
                     </div>
 
                     {/* SUBMISSION */}
                     <div className="upload-card">
-                        <div className="card-title">📗 제출 문서</div>
+                        <div className="card-title">📗 Submission Document</div>
 
                         <div
                             className={`dropzone 
@@ -184,18 +184,18 @@ function UploadPage() {
                             {subFile ? (
                                 <span className="file-name">{subFile.name}</span>
                             ) : (
-                                <span className="placeholder">여기에 파일을 드래그하거나 클릭하세요</span>
+                                <span className="placeholder">Drag a file here or click to upload</span>
                             )}
                         </div>
 
                         {subError && (
                             <div className="error-text">
-                                지원하지 않는 파일 형식입니다.
+                                Unsupported file format.
                             </div>
                         )}
 
                         <div className="file-hint">
-                            • 지원 형식: PDF, DOCX, TXT
+                            • Supported formats: PDF, DOCX, TXT
                         </div>
                     </div>
                 </div>
@@ -206,7 +206,7 @@ function UploadPage() {
                     disabled={!reqFile || !subFile || loading}
                     onClick={handleAnalyze}
                 >
-                    분석하기
+                    Analyze
                 </button>
 
             </div>
@@ -216,11 +216,11 @@ function UploadPage() {
                 <div className="footer-inner">
                     <div className="footer-col">
                         <h4>CheckMate</h4>
-                        <p>AI 기반 요구사항 충족 분석 서비스</p>
+                        <p>AI-powered requirement validation service</p>
                     </div>
                     <div className="footer-col">
                         <h4>Team</h4>
-                        <p>권도훈 · 김건우 · 오경훈 · 임동현</p>
+                        <p>KwonDohun · KimGunwoo · OhKyounghun · LimDonghyun</p>
                     </div>
                     <div className="footer-col">
                         <h4>Contact</h4>
