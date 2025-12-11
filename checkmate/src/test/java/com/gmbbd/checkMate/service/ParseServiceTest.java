@@ -1,6 +1,7 @@
 package com.gmbbd.checkMate.service;
 
 import com.gmbbd.checkMate.exception.ApiException;
+import com.gmbbd.checkMate.util.PandocExecutor;
 import com.gmbbd.checkMate.util.TextCleaner;
 import org.junit.jupiter.api.Test;
 import org.springframework.mock.web.MockMultipartFile;
@@ -11,7 +12,8 @@ import static org.mockito.Mockito.*;
 class ParseServiceTest {
 
     private final TextCleaner cleaner = mock(TextCleaner.class);
-    private final ParseService parseService = new ParseService(cleaner);
+    private final PandocExecutor pandocExecutor = mock(PandocExecutor.class);
+    private final ParseService parseService = new ParseService(pandocExecutor, cleaner);
 
     @Test
     void extractText_shouldThrowException_whenFileIsNull() {
@@ -32,11 +34,11 @@ class ParseServiceTest {
         MockMultipartFile file =
                 new MockMultipartFile("file", "sample.txt", "text/plain", "hello world".getBytes());
 
-        // cleaner.clean() mocking
-        when(cleaner.clean("hello world")).thenReturn("cleaned text");
+        when(pandocExecutor.convertToMarkdown(any())).thenReturn(" ### hello world");
+        when(cleaner.cleanMarkdown(" ### hello world")).thenReturn("hello world");
 
         String result = parseService.extractText(file);
 
-        assertEquals("cleaned text", result);
+        assertEquals("hello world", result);
     }
 }

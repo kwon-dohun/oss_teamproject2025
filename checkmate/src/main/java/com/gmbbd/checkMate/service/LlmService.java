@@ -166,5 +166,6 @@ public class LlmService {
         } catch (Exception e) {
             throw new ApiException("OpenAI 응답 파싱 실패: " + e.getMessage());
         }
+
     }
 }
