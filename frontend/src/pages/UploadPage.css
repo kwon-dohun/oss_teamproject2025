@@ -1,0 +1,358 @@
+/* 전체 설정 */
+body {
+    margin: 0;
+    padding: 0;
+    background: #F7F8FC;
+    font-family: 'Pretendard', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    height: 58px;
+    background: #1E2448;
+    color: #FFFFFF;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 28px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.nav-right {
+    opacity: 0.8;
+}
+
+/* HERO SECTION */
+.hero-section {
+    width: 100%;
+    padding-top: 150px;
+    text-align: center;
+    background: linear-gradient(to bottom, #F2F4F9 0%, #F7F8FC 100%);
+}
+
+.hero-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1E1E1E;
+    margin-bottom: 12px;
+}
+
+.hero-subtitle {
+    font-size: 16px;
+    color: #555;
+    font-weight: 800;
+}
+
+.hero-full-divider {
+    width: 100%;
+    max-width: 1000px;
+    height: 1px;
+    background: rgba(0,0,0,0.12);
+    margin: 35px auto 10px;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+}
+
+
+/* 업로드 Wrapper */
+
+.upload-wrapper {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 업로드 카드 컨테이너 */
+
+.upload-container {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* 업로드 카드 */
+
+.upload-card {
+    width: 420px;
+    padding: 32px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.card-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1E1E1E;
+    margin-bottom: 16px;
+}
+
+/* Dropzone */
+
+.dropzone {
+    width: 100%;
+    max-width: 420px;
+    height: 170px;
+
+    border: 2px dashed #C7C7C7;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 18px;
+
+    color: #777;
+    cursor: pointer;
+    position: relative;
+
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.dropzone:hover {
+    background: #F2F4F8;
+}
+
+.drag-active {
+    background: #E9EEFF;
+    border-color: #3B63F6;
+    color: #3B63F6;
+}
+
+.dropzone-error {
+    border-color: #FF4D4F !important;
+    background: #FFF1F0 !important;
+    animation: shake 0.25s ease;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+.file-input {
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+
+/* placeholder & filename */
+.placeholder,
+.file-name {
+    max-width: 360px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+}
+
+.placeholder {
+    color: #777;
+}
+
+.file-name {
+    color: #000;
+    font-weight: 500;
+}
+
+/* 지원 형식 안내 */
+.file-hint {
+    margin-top: 6px;
+    font-size: 13px;
+    color: #888;
+}
+
+/* 에러 메시지 */
+.error-text {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #D40000;
+}
+
+/* 분석하기 버튼 */
+
+.analyze-button {
+    margin-top: 70px;
+    margin-bottom: 60px;
+
+    width: 320px;
+    padding: 18px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #3B63F6;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.analyze-button:not(:disabled):hover {
+    background: #2145e0;
+    transform: translateY(-2px);
+}
+
+.analyze-button:disabled {
+    background: #AFC3F7;
+    cursor: not-allowed;
+}
+
+/* Footer */
+
+.footer {
+    /*padding: 60px 0;*/
+    background: #1E2448;
+    color: white;
+    margin-top: 80px;
+}
+
+.footer-inner {
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    margin-bottom: 6px;
+    font-size: 17px;
+}
+
+.footer-col p {
+    margin: 3px 0;
+    opacity: 0.85;
+    font-size: 14px;
+}
+
+/* 로딩 오버레이 */
+
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-box {
+    background: white;
+    padding: 20px 36px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.spinner {
+    width: 26px;
+    height: 26px;
+    border: 4px solid #ccc;
+    border-top-color: #3B63F6;
+    border-radius: 50%;
+    margin: 0 auto 12px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-text {
+    font-size: 14px;
+    color: #333;
+}
+
+/* 로고 버튼화 */
+.nav-left {
+    cursor: pointer;
+}
+
+
+/* Step Guide */
+.step-guide {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 16px;
+    border-radius: 999px;
+
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+
+    font-size: 14px;
+    color: #555;
+}
+
+.step-badge {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #3B63F6;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.step-text {
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .step-guide {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .step-item {
+        width: 100%;
+        max-width: 360px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .step-text {
+        white-space: normal;
+    }
+}

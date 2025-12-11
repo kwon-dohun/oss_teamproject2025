@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* 전체 페이지 초기화 */
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden !important;
+    font-family: 'Pretendard', system-ui, sans-serif;
+    background: #F7F8FC;
+}
+
+/* 기본 텍스트: 블랙 계열 */
+body {
+    color: #1E1E1E;
+}
+
+/* 링크 기본 스타일 제거 */
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+/* 버튼 기본 스타일 제거 */
+button {
+    all: unset;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* 제목 기본값 제거 (CheckMate 스타일에만 적용되게) */
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* img 등 block 요소 통일 */
+img {
+    display: block;
+    max-width: 100%;
+}

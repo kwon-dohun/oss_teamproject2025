@@ -1,0 +1,139 @@
+/* 전체 레이아웃 업로드 페이지 스타일 맞춤 */
+.analyze-root {
+    background: #F7F8FC;
+    min-height: 100vh;
+    font-family: 'Pretendard', sans-serif;
+}
+
+/* 업로드 페이지 NAVBAR 그대로 */
+.navbar {
+    width: 100%;
+    height: 58px;
+    background: #1E2448;
+    color: white;
+
+    padding: 0 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* 홈 버튼 */
+.home-button {
+    position: fixed;
+    top: 72px;
+    right: 28px;
+
+    padding: 8px 14px;
+    font-size: 15px;
+
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+.home-button:hover {
+    background: #f2f2f2;
+}
+
+/* 중앙 컨텐츠 */
+.analyze-container {
+    padding-top: 110px;
+    max-width: 900px;
+    width: calc(100% - 40px);
+    margin: 130px auto 0;
+    text-align: center;
+}
+
+/* 스피너 */
+.spinner {
+    width: 40px;
+    height: 40px;
+
+    border: 4px solid #e0e0e0;
+    border-top-color: #3B63F6;
+
+    border-radius: 50%;
+    margin: 0 auto 25px;
+
+    animation: spin .8s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 타이틀 */
+.loading-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* STEP LIST */
+.steps-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* STEP BOX */
+.step-box {
+    width: 100%;
+    padding: 18px 20px;
+
+
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+
+    position: relative;
+
+    font-size: 16px;
+    text-align: left;
+
+    opacity: 0.6;
+    transition: 0.25s;
+}
+
+/* 진행 중 */
+.step-box.active {
+    border-color: #3B63F6;
+    opacity: 1;
+    background: #F5F7FF;
+}
+
+/* 완료됨 */
+.step-box.completed {
+    background: #E7F9EF;
+    border-color: #25C76F;
+    opacity: 1;
+}
+
+/* 체크 원 */
+.check-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+
+    background: #25C76F;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
