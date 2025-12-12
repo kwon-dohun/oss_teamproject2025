@@ -44,33 +44,23 @@ It is especially useful for:
 
 ---
 
-### Getting Started
-1. Clone the repository
-```
-git clone https://github.com/kwon-dohun/oss_teamproject2025
-cd oss_teamproject2025
-```
+### Project URL
+https://oss-gmbbd.onrender.com
 
-2. Run the Frontend
-```
-cd frontend
-npm install
-npm run dev
-```
-
-3. Run the Backend (Spring Boot)
-```
-cd checkmate
-./gradlew bootRun
-```
-
-4. Usage
+1. Usage
     1) Access the web UI
     2) Upload a requirement document
     3) Upload a submission document
     4) Receive automatic analysis
     5) Review requirement statuses and evidence
     6) Download the result file if needed
+       
+2. Usage Examples:
+<img width="536" height="323" alt="image" src="https://github.com/user-attachments/assets/d2046f4e-2610-48fb-b28f-a9aae42aea80" />
+   <img width="537" height="283" alt="image" src="https://github.com/user-attachments/assets/7ad52d34-7deb-4cc1-8e25-9783456cc216" />
+   <img width="540" height="329" alt="image" src="https://github.com/user-attachments/assets/bfc6ed74-5b31-47d0-a6fc-1c141b4e1915" />
+
+
 
 Everything works through a clean and minimal interface.
 
@@ -117,6 +107,7 @@ The CheckMate project itself remains under the **MIT License**.
 
 Pandoc source code: https://github.com/jgm/pandoc  
 Pandoc license (GPL): https://github.com/jgm/pandoc/blob/master/COPYING
+
 
 
 
